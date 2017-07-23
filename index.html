@@ -4,17 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="shortcut icon" href="img/fav/favicon.ico" type="image/png">
     <link rel="stylesheet" href="css/animate.min.min.css">
-    <link rel="stylesheet" href="css/main.css">
-    <title>Homework Gulp</title>
+    <link rel="stylesheet" href="css/main.min.css">
+    <title>Homework #0</title>
 </head>
 <body>
-    <header>
+    <header class="header-project">
         <div class="wrap-logo">
             <img src="img/logo.svg" alt="Maker" class="logo">
         </div>
 
-        <nav class="main-nav">
+        <nav class="main-nav" id="nav">
             <input type="checkbox" id="menu-checkbox">
             <label for="menu-checkbox"></label>
             <ul>
@@ -26,7 +28,7 @@
         </nav>
 
         <div class="wrap-h1">
-            <h1 class="tlt" data-in-effect="fadeIn">we build innovative companies</h1>
+            <h1 id="text-header"></h1>
         </div>
 
     </header>
@@ -36,7 +38,7 @@
             <div class="container">
                 <div class="numbers number-section-1">
                     <div class="section-number">01</div>
-                    <h2 class="section-title tlt" data-in-effect="fadeIn">misssion</h2>
+                    <h2 class="section-title">mission</h2>
                 </div>
                 <img src="img/01-section.png" class="photo">
                 <div class="text">
@@ -127,10 +129,8 @@
         </section>
     </main>
 
-    <script type="text/javascript" src="js/jquery.min.js"></script>
-    <script type="text/javascript" src="js/jquery.textillate.js"></script>
-    <script type="text/javascript" src="js/jquery.lettering.js"></script>
-    <script type="text/javascript" src="js/jquery.waypoints.js"></script>
+    <script type="text/javascript" src="libs/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="js/libs.min.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>

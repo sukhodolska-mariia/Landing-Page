@@ -2,34 +2,7 @@ $(document).ready(function() {
 
 
     // Анимация меню
-    $("li:nth-child(1) a").click(function() {
-        $("html, body").animate({
-            scrollTop: $($(this).attr("href")).offset().top + "px"
-        }, {
-            duration: 500,
-            easing: "swing"
-        });
-        return false;
-    });
-    $("li:nth-child(2) a").click(function() {
-        $("html, body").animate({
-            scrollTop: $($(this).attr("href")).offset().top + "px"
-        }, {
-            duration: 500,
-            easing: "swing"
-        });
-        return false;
-    });
-    $("li:nth-child(3) a").click(function() {
-        $("html, body").animate({
-            scrollTop: $($(this).attr("href")).offset().top + "px"
-        }, {
-            duration: 500,
-            easing: "swing"
-        });
-        return false;
-    });
-    $("li:nth-child(4) a").click(function() {
+    $("#nav a").click(function() {
         $("html, body").animate({
             scrollTop: $($(this).attr("href")).offset().top + "px"
         }, {
@@ -39,16 +12,27 @@ $(document).ready(function() {
         return false;
     });
 
+
     // Анимация h1 в header
-    $(function () {
-        $('header .tlt').css('opacity', 1);
-        $('header .tlt').textillate();
-    });
+    var i=-1;
+    var textNew = "we build innovative companies";
+    var textId = "#text-header";
+
+    function printText() {
+        i++;
+        var textTitle = $(textId).text();
+        textTitle = textTitle + textNew.charAt(i);
+        $(textId).text(textTitle);
+        if (i<textNew.length){
+            setTimeout(function(){printText()}, 70);
+        }
+    };
+
+    printText();
 
     // Анимация section-1
     $('.section-1').waypoint(function(direction) {
-        $('.number-section-1 .tlt').css('opacity', 1);
-        $('.number-section-1 .tlt').textillate();
+        $('.number-section-1 h2').animate({opacity:1}, 1000);
         $('.section-1 .text').addClass('animated fadeInRight');
         $('.section-1 img').addClass('animated fadeInLeft');
     }, {
@@ -57,17 +41,15 @@ $(document).ready(function() {
 
     // Анимация section-2
     $('.section-2').waypoint(function(direction) {
-        $('.number-section-2 .tlt').css('opacity', 1);
-        $('.number-section-2 .tlt').textillate();
-        $('.logos').css('animation', 'opacity-menu 2s linear forwards');
+        $('.number-section-2 h2').animate({opacity:1}, 1000);
+        $('.logos').addClass('animated fadeIn');
     }, {
         offset: '45%'
     });
 
     // Анимация section-3
     $('.section-3').waypoint(function(direction) {
-        $('.number-section-3 .tlt').css('opacity', 1);
-        $('.number-section-3 .tlt').textillate();
+        $('.number-section-3 h2').animate({opacity:1}, 1000);
         $('.text-george').addClass('animated fadeInLeft');
         $('img.george').addClass('animated fadeInRight');
         }, {
@@ -104,8 +86,7 @@ $(document).ready(function() {
 
     // Анимация section-4
     $('.section-4').waypoint(function(direction) {
-        $('.number-section-4 .tlt').css('opacity', 1);
-        $('.number-section-4 .tlt').textillate();
+        $('.number-section-4 h2').animate({opacity:1}, 1000);
         $('.text-section-4').addClass('animated fadeInRight');
     }, {
         offset: '45%'
